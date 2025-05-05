@@ -81,7 +81,7 @@ const ProductDetail = () => {
             )}
           </button>
         </div>
-        <Link to="/" className="mt-4 inline-block text-blue-500 hover:underline">
+        <Link to="/" className="mt-4 inline-block text-[#0D1E3D] hover:underline">
           Back to Products
         </Link>
       </div>
@@ -105,7 +105,7 @@ const ProductDetail = () => {
     return (
       <div className="container mx-auto p-4 text-center">
         <p>Product not found.</p>
-        <Link to="/" className="text-blue-500 hover:underline">
+        <Link to="/" className="text-[#0D1E3D] hover:underline">
           Back to Products
         </Link>
       </div>
@@ -114,10 +114,10 @@ const ProductDetail = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <Link to="/" className="text-blue-500 hover:underline mb-4 inline-block">
+      <Link to="/" className="text-[#0D1E3D] hover:underline mb-4 inline-block">
         ← Back to Products
       </Link>
-      <div className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
+      <div className="bg-[#E0E0E0] p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
         <img
           src={product.image}
           alt={product.title}
@@ -125,18 +125,18 @@ const ProductDetail = () => {
           className="w-full md:w-1/2 h-64 object-contain"
         />
         <div className="flex-1">
-          <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
-          <p className="text-gray-600 text-lg mb-4">${product.price}</p>
-          <p className="text-gray-700 mb-4">{product.description}</p>
-          <p className="text-sm text-gray-500">
+          <h2 className="text-[#08090A] text-2xl font-bold mb-2">{product.title}</h2>
+          <p className="text-[#1F2021] text-lg mb-4">${product.price}</p>
+          <p className="text-[#1F2021] mb-4">{product.description}</p>
+          <p className="text-[#1F2021] text-sm">
             Category: {product.category}
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-[#1F2021] text-sm">
             Rating: {product.rating.rate} / 5 ({product.rating.count} reviews)
           </p>
           <button
             onClick={() => addToCart(product)}
-            className="mt-6 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600"
+            className="bg-[#FFC107] hover:bg-[#FFCA28] text-[#08090A] mt-6 w-full py-2 rounded-lg"
           >
             Add to Cart
           </button>

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 html, body, #root {
-  @apply min-h-screen w-full bg-[#FFFFFF];
+  @apply min-h-screen w-full bg-[#F5F5F5];
   margin: 0;
   padding: 0;
   box-sizing: border-box;

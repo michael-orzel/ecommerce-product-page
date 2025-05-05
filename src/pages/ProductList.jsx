@@ -69,7 +69,7 @@ const ProductList = () => {
           <p>{error}</p>
           <button
             onClick={fetchProducts}
-            className={`mt-4 bg-red-500 text-white py-2 px-4 rounded-lg flex items-center justify-center ${
+            className={`mx-auto mt-4 bg-red-500 text-white py-2 px-4 rounded-lg flex items-center justify-center ${
               isRetrying ? "opacity-50 cursor-not-allowed" : "hover:bg-red-600"
             }`}
             disabled={isRetrying}
@@ -99,7 +99,7 @@ const ProductList = () => {
                 Retrying...
               </>
             ) : (
-              "Try Again"
+              <span className="text-center">Try Again</span>
             )}
           </button>
         </div>
@@ -122,7 +122,7 @@ const ProductList = () => {
             filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
+                className="bg-[#E0E0E0] p-4 rounded-lg shadow-md hover:shadow-lg transition"
               >
                 <Link to={`/product/${product.id}`}>
                   <img
@@ -131,12 +131,12 @@ const ProductList = () => {
                     loading="lazy"
                     className="w-full h-48 object-contain mb-4"
                   />
-                  <h2 className="text-lg font-semibold truncate">{product.title}</h2>
+                  <h2 className="text-[#08090A] text-lg font-semibold truncate">{product.title}</h2>
                 </Link>
-                <p className="text-gray-600">${product.price}</p>
+                <p className="text-[#1F2021]">${product.price}</p>
                 <button
                   onClick={() => addToCart(product)}
-                  className="mt-2 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600"
+                  className="mt-2 w-full bg-[#FFC107] hover:bg-[#FFCA28] text-[#08090A] py-2 rounded-lg"
                 >
                   Add to Cart
                 </button>
