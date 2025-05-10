@@ -59,18 +59,18 @@ const ProductList = () => {
           placeholder="Search products..."
           value={searchTerm}
           onChange={handleSearch}
-          className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFC107]"
           disabled={isLoading || error}
         />
       </div>
 
       {error ? (
-        <div className="text-center p-6 bg-red-100 text-red-700 rounded-lg">
+        <div className="text-center p-6 bg-red-100 text-[#3F0F0F] rounded-lg">
           <p>{error}</p>
           <button
             onClick={fetchProducts}
-            className={`mx-auto mt-4 bg-red-500 text-white py-2 px-4 rounded-lg flex items-center justify-center ${
-              isRetrying ? "opacity-50 cursor-not-allowed" : "hover:bg-red-600"
+            className={`mx-auto mt-4 bg-[#3F0F0F] text-white py-2 px-4 rounded-lg flex items-center justify-center ${
+              isRetrying ? "opacity-50 cursor-not-allowed" : "hover:bg-[#2F0A0A]"
             }`}
             disabled={isRetrying}
           >
@@ -122,7 +122,7 @@ const ProductList = () => {
             filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-[#E0E0E0] p-4 rounded-lg shadow-md hover:shadow-lg transition"
+                className="bg-[#F5F5F5] p-4 rounded-lg shadow-md hover:shadow-lg transition"
               >
                 <Link to={`/product/${product.id}`}>
                   <img

@@ -42,13 +42,16 @@ const ProductDetail = () => {
 
   if (error) {
     return (
-      <div className="container mx-auto p-4 text-center">
-        <div className="p-6 bg-red-100 text-red-700 rounded-lg">
+      <div className="container mx-auto p-4">
+        <Link to="/" className="mt-4 inline-block text-[#0D1E3D] hover:underline">
+          ← Back to Products
+        </Link>
+        <div className=" text-center mt-4 p-6 bg-[#FEE2E2] text-[#3F0F0F] rounded-lg">
           <p>{error}</p>
           <button
             onClick={fetchProduct}
-            className={`mt-4 bg-red-500 text-white py-2 px-4 rounded-lg flex items-center justify-center ${
-              isRetrying ? "opacity-50 cursor-not-allowed" : "hover:bg-red-600"
+            className={`mx-auto mt-4 bg-[#3F0F0F] text-white py-2 px-4 rounded-lg flex items-center justify-center ${
+              isRetrying ? "opacity-50 cursor-not-allowed" : "hover:bg-[#2F0A0A]"
             }`}
             disabled={isRetrying}
           >
@@ -81,9 +84,6 @@ const ProductDetail = () => {
             )}
           </button>
         </div>
-        <Link to="/" className="mt-4 inline-block text-[#0D1E3D] hover:underline">
-          Back to Products
-        </Link>
       </div>
     );
   }
@@ -103,10 +103,10 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div className="container mx-auto p-4 text-center">
+      <div className="container mx-auto p-4">
         <p>Product not found.</p>
         <Link to="/" className="text-[#0D1E3D] hover:underline">
-          Back to Products
+          ← Back to Products
         </Link>
       </div>
     );
@@ -117,7 +117,7 @@ const ProductDetail = () => {
       <Link to="/" className="text-[#0D1E3D] hover:underline mb-4 inline-block">
         ← Back to Products
       </Link>
-      <div className="bg-[#E0E0E0] p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
+      <div className="bg-[#F5F5F5] p-6 rounded-lg shadow-md flex flex-col md:flex-row gap-6">
         <img
           src={product.image}
           alt={product.title}
