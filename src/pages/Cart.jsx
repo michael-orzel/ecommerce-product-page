@@ -1,7 +1,7 @@
 import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+  const Cart = () => {
   const { cart, removeFromCart, updateQuantity, getTotalItems, getTotalPrice } = useCart();
 
   return (
@@ -17,7 +17,7 @@ const Cart = () => {
           {cart.map((item) => (
             <div
               key={item.id}
-              className="bg-[#F5F5F5] flex items-center p-4 rounded-lg shadow-md"
+              className="bg-[#F5F5F5] flex items-center justify-center p-4 rounded-lg shadow-md"
             >
               <img
                 src={item.image}
@@ -26,7 +26,7 @@ const Cart = () => {
                 className="w-16 h-16 object-contain mr-4"
               />
               <div className="flex-1">
-                <h3 className="text-[#08090A] text-lg font-semibold truncate">{item.title}</h3>
+                <h3 className="text-[#08090A] text-lg font-semibold">{item.title}</h3>
                 <p className="text-[#1F2021]">
                   ${item.price} x {item.quantity} = ${(item.price * item.quantity).toFixed(2)}
                 </p>
@@ -50,7 +50,7 @@ const Cart = () => {
                 onClick={() => removeFromCart(item.id)}
                 className="bg-[#3F0F0F] hover:bg-[#2F0A0A] text-[#F5F5F5] py-1 px-3 rounded-lg"
               >
-                Remove
+                X
               </button>
             </div>
           ))}
